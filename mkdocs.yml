@@ -1,0 +1,30 @@
+site_name: "IA - 2022.1"
+
+theme:
+  name: material
+  favicon: assets/logo/ia.png
+  logo: assets/logo/ia.png
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - Sobre: index.md
+  - Portfólio 01:
+      - Impressão Geral: portfolio_01/impressao_geral.md
+      - Conceitos: portfolio_01/conceitos.md
+      - Materiais extras: portfolio_01/discussoes.md
+      - Apresentação de Problemas: portfolio_01/problemas.md
+      - Conclusão: portfolio_01/conclusao.md
+  - Portfólio 02:
+      - Impressão Geral: portfolio_02/impressao_geral.md
+      - Conceitos: portfolio_02/conceitos.md
+      - Materiais extras: portfolio_02/discussoes.md
+      - Apresentação de Problemas: portfolio_02/problemas.md
+      - Conclusão: portfolio_02/conclusao.md
