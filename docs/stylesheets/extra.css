@@ -16,23 +16,23 @@ and background color
 }
 
 .md-main p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .md-main p > a,
 .md-main p > a:visited,
 .md-main p > a:hover,
 .md-main p > a:active {
-  text-decoration: none;
-  color: blue;
+  text-decoration: none !important;
+  color: blue !important;
 }
 
 .md-main img {
-  display: block;
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
+  display: block !important;
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 30% !important;
 }
 
 /*
