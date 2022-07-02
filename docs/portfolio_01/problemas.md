@@ -4,7 +4,7 @@
 Neste primeiro portfólio este tópico será apresentado a partir da solução de uma lista de 8 questões propostas pelo professor da disciplina.
 </p>
 
-1. **O que é inteligência ?**
+**O que é inteligência ?**
 
 <p style="text-indent: 20px; text-align: justify">
 Segundo o dicionário, inteligência é a faculdade de conhecer, compreender e aprender.
@@ -16,13 +16,13 @@ Segundo o dicionário, inteligência é a faculdade de conhecer, compreender e a
 Segundo o Jean Piaget(1986-1980), um dos mais importantes pensadores do século XX, inteligência é a solução de um problema novo para o indivíduo, é a coordenação dos meios para atingir um determinado fim, que não é acessível de maneira direta.
 </p>
 
-2. **O que é inteligência artificial ?**
+**O que é inteligência artificial ?**
 
 <p style="text-indent: 20px; text-align: justify">
 O termo “inteligência artificial” nasceu em 1956 no famoso encontro de Dartmouth e é, basicamente, um ramo de pesquisa da computação que busca fazer com que sistemas ou máquinas sejam capazes de imitar a inteligência humana com o objetivo de realizar tarefas, as IAs também podem se aprimorar iterativamente com base nas informações que coletam.
 </p>
 
-3. **Quais as áreas do conhecimento que contribuem para o campo de IA e quais suas contribuições ?**
+**Quais as áreas do conhecimento que contribuem para o campo de IA e quais suas contribuições ?**
 
 <p style="text-indent: 20px; text-align: justify">
 <b>Filosofia: </b> Refinamento das ideias e compreensão do universo ao qual a máquina está contida.
@@ -56,19 +56,19 @@ O termo “inteligência artificial” nasceu em 1956 no famoso encontro de Dart
 <b>Linguística: </b> Relacionamento entre a linguagem e o pensamento.
 </p>
 
-4. **O que foi o Dartmouth Summer Research Project on Artificial Intelligence de 1956 ?**
+**O que foi o Dartmouth Summer Research Project on Artificial Intelligence de 1956 ?**
 
 <p style="text-indent: 20px; text-align: justify">
 Foi um workshop que reuniu algumas das mais brilhantes mentes da computação, é considerado o marco inicial da inteligência artificial. Este encontro foi baseado na ideia de que todos os aspectos da aprendizagem ou qualquer outra característica da inteligência podem ser descritos com tanta precisão que uma máquina pode ser capaz de simulá-los.
 </p>
 
-5. **O que são os invernos de IA ?**
+**O que são os invernos de IA ?**
 
 <p style="text-indent: 20px; text-align: justify">
 Os invernos de IA foram períodos em que as expectativas sobre as possibilidades da inteligência artificial entravam em declínio, juntamente com isso os investimentos na área também diminuíram, levando algumas empresas à falência
 </p>
 
-6. **Explique o que é o problema da porta XOR e por quê esse problema gerou um desânimo na área de redes neurais.**
+**Explique o que é o problema da porta XOR e por quê esse problema gerou um desânimo na área de redes neurais.**
 
 <p style="text-indent: 20px; text-align: justify">
 Os primeiros algoritmos de inteligência artificial utilizavam o Perceptron como método para pesar evidências a fim de tomar decisões.
@@ -87,7 +87,7 @@ O problema é que um único Perceptron consegue resolver apenas problemas que po
 Essa falha em resolver problemas mais complexos causou uma queda de expectativa muito grande, e consequentemente, ao que ficou conhecido como primeiro Winter AI. 
 </p>
 
-7. **Explique o que a IA pode fazer hoje em relação a: fala, o biomimetismo, a exploração espacial, jogos, navegação na internet, veículos autônomos e vigilância.**
+**Explique o que a IA pode fazer hoje em relação a: fala, o biomimetismo, a exploração espacial, jogos, navegação na internet, veículos autônomos e vigilância.**
 
 <p style="text-indent: 20px; text-align: justify">
 <b>Fala: </b> Algoritmos de reconhecimento de voz integrados em assistentes virtuais, como a Alexa, faz com que a mesma só obedeça comandos da voz cadastrada no sistema, gerando maior segurança em ambientes automatizados controlados pela IA.
@@ -117,7 +117,7 @@ Essa falha em resolver problemas mais complexos causou uma queda de expectativa 
 <b>Vigilância: </b> Com o avanço da visão computacional alguns sistemas de vigilância podem ser capazes de identificar pessoas em meio a multidões e, por exemplo, rapidamente descobrir um indivíduo é foragido da justiça ou não. Como <a href="https://g1.globo.com/mundo/noticia/homem-e-reconhecido-e-preso-em-meio-a-publico-de-60-mil-em-show-na-china.ghtml" target="blank">esse caso</a> que aconteceu na China.
 </p>
 
-8. **Discorra sobre os impactos da IA na sociedade humana, considerando vantagens e riscos.**
+**Discorra sobre os impactos da IA na sociedade humana, considerando vantagens e riscos.**
 
 <p style="text-indent: 20px; text-align: justify">
 A inteligência artificial vem crescendo bastante em popularidade nos últimos anos, graças aos avanços na área muitas tarefas que eram ou seriam realizadas utilizando mão de obra humana pode ser substituída por máquinas, o que gera uma maior eficácia e acurácia, por outro lado é preciso ter cuidado durante o treinamento da tecnologia para que preconceitos e achismos do programador não afetem o julgamento da IA, como por exemplo o <a href="https://canaltech.com.br/inteligencia-artificial/ia-projetada-para-dar-conselhos-eticos-se-mostra-um-bot-racista-e-preconceituoso-200007/" target="blank"> Projeto Ask Delphi </a>.
