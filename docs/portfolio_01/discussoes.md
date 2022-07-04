@@ -24,6 +24,8 @@ Apesar dessa lei em específico ser mais um problema do setor tecnólogico do qu
 
 ## Utilização de dados em política
 
+![cambridge_analytica](../assets/portfolio_01/cabridge_analytica.png)
+
 <p style="text-indent: 20px; text-align: justify">
 No ano de 2018, um caso envolvendo a empresa Cambridge Analytica e o Facebook, onde os dados de 87 milhões de usuários foram utilizados a serviço da campanha de Donald Trump na eleição presidencial americana de 2016.
 </p>
