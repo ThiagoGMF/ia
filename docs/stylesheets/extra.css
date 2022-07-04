@@ -35,6 +35,17 @@ and background color
   width: 30% !important;
 }
 
+.md-main .full-size {
+  width: 100% !important;
+}
+
+.md-main iframe {
+  display: block !important;
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 /*
 Main headlines
 */

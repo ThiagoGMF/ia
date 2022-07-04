@@ -65,7 +65,7 @@ Foi um workshop que reuniu algumas das mais brilhantes mentes da computação, �
 **O que são os invernos de IA ?**
 
 <p style="text-indent: 20px; text-align: justify">
-Os invernos de IA foram períodos em que as expectativas sobre as possibilidades da inteligência artificial entravam em declínio, juntamente com isso os investimentos na área também diminuíram, levando algumas empresas à falência
+Os invernos de IA foram períodos em que as expectativas sobre as possibilidades da inteligência artificial entravam em declínio, juntamente com isso os investimentos na área também diminuíram, levando algumas empresas à falência.
 </p>
 
 **Explique o que é o problema da porta XOR e por quê esse problema gerou um desânimo na área de redes neurais.**
@@ -110,8 +110,10 @@ Essa falha em resolver problemas mais complexos causou uma queda de expectativa 
 </p>
 
 <p style="text-indent: 20px; text-align: justify">
-<b>Veículos autônomos: </b> Com IA integrada ao sistema dos veículos é possível que o automóvel se locomova sem a necessidade de um condutor.
+<b>Veículos autônomos: </b> Com IA integrada ao sistema dos veículos é possível que o automóvel se locomova sem a necessidade de um condutor. Essa tecnologia já pode ser observada em alguns modelos da Tesla, como no vídeo abaixo:
 </p>
+
+<iframe width="560" height="315" aling="center" src="https://www.youtube.com/embed/fmDdxzI69Uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p style="text-indent: 20px; text-align: justify">
 <b>Vigilância: </b> Com o avanço da visão computacional alguns sistemas de vigilância podem ser capazes de identificar pessoas em meio a multidões e, por exemplo, rapidamente descobrir um indivíduo é foragido da justiça ou não. Como <a href="https://g1.globo.com/mundo/noticia/homem-e-reconhecido-e-preso-em-meio-a-publico-de-60-mil-em-show-na-china.ghtml" target="blank">esse caso</a> que aconteceu na China.
