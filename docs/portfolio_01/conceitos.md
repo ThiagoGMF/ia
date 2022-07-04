@@ -126,23 +126,29 @@ Em 2016, a AlphaGo, desenvolvida pela Deepmind, virou mestre no jogo de tabuleir
 
 ## Estado da arte
 
-<p style="text-indent: 20px; text-align: justify">
-Um dos exemplos mais famosos de inteligência artificial nos cinemas é o agente inteligente J.A.R.V.I.S (Just A Rather Very intelligent System), criado pelo personagem Tony Stark, do filme Homem de Ferro, que funciona como assistente de Tony Stark, executando todos os sistemas internos dos edifícios Stark e os trajes do Homem de Ferro.
-</p>
-
 <iframe width="560" height="315"  src="https://www.youtube.com/embed/SD9tCCp1F8s?start=0&end=26" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p style="text-indent: 20px; text-align: justify">
-Outro exemplo de inteligência artificial no mundo Marvel, é o robô supervilão Ultron, criado pelo Dr. Pym com o objetivo de ajudar a criar um mundo melhor, mas após análise da situação do universo a inteligência artificial concluiu, que a melhor maneira de garantir tal objetivo é exterminar a raça humana.
+Um dos exemplos mais famosos de inteligência artificial nos cinemas é o agente inteligente J.A.R.V.I.S (Just A Rather Very intelligent System), criado pelo personagem Tony Stark, do filme Homem de Ferro, que funciona como assistente de Tony Stark, executando todos os sistemas internos dos edifícios Stark e os trajes do Homem de Ferro.
 </p>
 
 <iframe width="560" height="315"  src="https://www.youtube.com/embed/z_GwTRrA-08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p style="text-indent: 20px; text-align: justify">
-Fugindo do universo Marvel, outros robôs/IAS bem conhecidas do públicos são os androides C-3PO e R2-D2, da franquia criada por George Lucas, Star Wars.
+Outro exemplo de inteligência artificial no mundo Marvel, é o robô supervilão Ultron, criado pelo Dr. Pym com o objetivo de ajudar a criar um mundo melhor, mas após análise da situação do universo a inteligência artificial concluiu, que a melhor maneira de garantir tal objetivo é exterminar a raça humana.
 </p>
 
 ![c3po-r2d2](../assets/portfolio_01/c-3po_e_r2-d2.png)
+
+<p style="text-indent: 20px; text-align: justify">
+Fugindo do universo Marvel, outros robôs/IAS bem conhecidas do públicos são os androides C-3PO e R2-D2, da franquia criada por George Lucas, Star Wars.
+</p>
+
+![yui](../assets/portfolio_01/yui.jpg)
+
+<p style="text-indent: 20px; text-align: justify">
+Um exemplo de IA em animes é a personagem Yui, um progama de saúde mental criado pelo sistema cardinal. Inicialmente Yui foi criada para ajudar os jogadores à não ficarem deprimidos e quererem se suicidar, mas logo após o jogo ser lançado ela foi proibida de interagir com os personagens.
+</p>
 
 ## Benefícios e riscos
 

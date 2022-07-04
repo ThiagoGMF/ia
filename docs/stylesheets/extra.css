@@ -35,10 +35,6 @@ and background color
   width: 50% !important;
 }
 
-.md-main .full-size {
-  width: 100% !important;
-}
-
 .md-main iframe {
   display: block !important;
   float: none !important;
