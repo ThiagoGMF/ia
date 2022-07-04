@@ -66,8 +66,6 @@ Em 1959, o termo machine learning é utilizado pela primeira vez, descrevendo um
 Em 1969, o Shakey, primeiro robô que unia mobilidade, fala e uma certa autonomia em suas ações foi apresentado, apesar da lentidão e algumas falhas.
 </p>
 
-<img src = "../assets/portfolio_01/ai_winter.png" class="full-size" />
-
 <p style="text-indent: 20px; text-align: justify">
 Mas apesar dos resultados apresentados isso não era o suficiente para alcançar as expectativas impostas na área, o que levou a uma diminuição no interesse e investimentos no setor, ocasionando no primeiro inverno de IA.
 </p>
