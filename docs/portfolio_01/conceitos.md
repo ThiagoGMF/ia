@@ -147,7 +147,7 @@ Fugindo do universo Marvel, outros robôs/IAS bem conhecidas do públicos são o
 ![yui](../assets/portfolio_01/yui.jpg)
 
 <p style="text-indent: 20px; text-align: justify">
-Um exemplo de IA em animes é a personagem Yui, um progama de saúde mental criado pelo sistema cardinal. Inicialmente Yui foi criada para ajudar os jogadores à não ficarem deprimidos e quererem se suicidar, mas logo após o jogo ser lançado ela foi proibida de interagir com os personagens.
+Um exemplo de IA em animes é a personagem Yui, de Sword Art Online, um progama de saúde mental criado pelo sistema cardinal. Inicialmente Yui foi criada para ajudar os jogadores à não ficarem deprimidos e quererem se suicidar, mas logo após o jogo ser lançado ela foi proibida de interagir com os personagens.
 </p>
 
 ## Benefícios e riscos
@@ -177,3 +177,9 @@ Essa característica pode ser vista tanto de forma benéfica quanto maléfica, v
 <p style="text-indent: 20px; text-align: justify">
 Os assistentes inteligentes, como o jarvis citado acima, deixam de ser obra de ficção e passam a ser realidade através de modelos já existentes, como a Siri e a Alexa. Elas se integram ao calendário do usuário de forma a otimizar as tarefas agendadas.
 </p>
+
+## Referências
+
+> Histórico da Intelingência Artificial, Instituto de Engenharia. Disponível em: https://www.institutodeengenharia.org.br/site/2018/10/29/a-historia-da-inteligencia-artificial/, acesso em 26 de jun. de 2022.
+
+> Inteligência Artificial: Riscos, benefícios e uso Responsável, SciELO. Disponível em: https://www.scielo.br/j/ea/a/ZnKyrcrLVqzhZbXGgXTwDtn/, acesso em 26 de jun. de 2022.

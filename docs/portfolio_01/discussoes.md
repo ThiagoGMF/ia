@@ -53,3 +53,7 @@ Christopher Wylie, um funcionário da Cambridge Analytica, afirma que, como 270 
 <p style="text-indent: 20px; text-align: justify">
 De acordo com Wylie, os dados vendidos à Cambridge Analytica teriam sido usados para catalogar o perfil das pessoas e, então, direcionar, de forma mais personalizada, materiais pró-Trump e mensagens contrárias à adversária dele, a democrata Hillary Clinton.
 </p>
+
+## Referências
+
+> Escândalo de dados, g1. Disponível em: https://g1.globo.com/economia/tecnologia/noticia/entenda-o-escandalo-de-uso-politico-de-dados-que-derrubou-valor-do-facebook-e-o-colocou-na-mira-de-autoridades.ghtml, acesso em 27 de jun. de 2022.
