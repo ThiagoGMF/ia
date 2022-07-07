@@ -52,17 +52,35 @@ Main headlines
 /*
 Tables
 */
-tbody {
-  background-color: rgba(255, 255, 255, 0.05) !important;
+
+.md-typeset table:not([class]) {
+  background-color: #181a1b !important;
+  border: 0.05rem solid rgba(140, 130, 115, 0.12) !important;
+}
+
+table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  max-width: 100% !important;
 }
 
 .md-typeset table:not([class]) th {
-  background-color: rgba(255, 255, 255, 0.11) !important;
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  font-weight: 700 !important;
+  min-width: 5rem !important;
+  padding: 0.9375em 1.25em !important;
+  vertical-align: top !important;
 }
 
-.md-typeset table:not([class]) tr:hover {
+.md-typeset table:not([class]) tbody tr {
+  transition: background-color 125ms !important;
   box-shadow: none !important;
-  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+tbody {
+  border-color: inherit !important;
+  display: table-row-group !important;
+  vertical-align: middle !important;
 }
 
 /*

@@ -152,7 +152,7 @@ Com o avanço da visão computacional alguns sistemas de vigilância podem ser c
 ## Discorra sobre os impactos da IA na sociedade humana, considerando vantagens e riscos.
 
 <p style="text-indent: 20px; text-align: justify">
-A inteligência artificial vem crescendo bastante em popularidade nos últimos anos, graças aos avanços na área muitas tarefas que eram ou seriam realizadas utilizando mão de obra humana pode ser substituída por máquinas, o que gera uma maior eficácia e acurácia, por outro lado é preciso ter cuidado durante o treinamento da tecnologia para que preconceitos e achismos do programador não afetem o julgamento da IA, como por exemplo o <a href="https://canaltech.com.br/inteligencia-artificial/ia-projetada-para-dar-conselhos-eticos-se-mostra-um-bot-racista-e-preconceituoso-200007/" target="blank"> Projeto Ask Delphi </a>.
+A inteligência artificial vem crescendo bastante em popularidade nos últimos anos, graças aos avanços na área muitas tarefas que eram ou seriam realizadas utilizando mão de obra humana pode ser substituída por máquinas, o que gera uma maior eficácia e acurácia, por outro lado é preciso ter cuidado durante o treinamento da tecnologia para que preconceitos e achismos do programador não afetem o julgamento da IA, como por exemplo o que ocorreu com o <a href="https://canaltech.com.br/inteligencia-artificial/ia-projetada-para-dar-conselhos-eticos-se-mostra-um-bot-racista-e-preconceituoso-200007/" target="blank"> Projeto Ask Delphi </a>.
 </p>
 
 ## Referências
