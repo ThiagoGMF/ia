@@ -3,7 +3,7 @@
 ## IA jogando jogos
 
 <p style="text-indent: 20px; text-align: justify">
-O canal brasileiro "Universo Programado", criado por Victor Dias, utiliza de seus conhecimentos em programação e inteligência artificial para criar programas que aprendem a jogar diversos jogos, além de outras aplicações de inteligência artificial. Veja o vídeo abaixo, onde ele criou uma IA para jogar o jogo da Google T-Rex Game.
+O canal brasileiro "Universo Programado", criado por Victor Dias, utiliza de seus conhecimentos em programação e inteligência artificial para criar programas que aprendem a jogar diversos jogos, além de outras aplicações de inteligência artificial. Veja o vídeo abaixo, onde ele criou uma IA para jogar o jogo da Google, o T-Rex Game.
 </p>
 
 <iframe width="560" height="315"  src="https://www.youtube.com/embed/NZlIYr1slAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
