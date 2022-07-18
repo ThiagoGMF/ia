@@ -16,13 +16,13 @@ markdown_extensions:
 
 nav:
   - Sobre: index.md
-  - Portfólio 01:
+  - Introdução à IA:
       - Impressão Geral: portfolio_01/impressao_geral.md
       - Conceitos: portfolio_01/conceitos.md
       - Materiais extras: portfolio_01/discussoes.md
       - Apresentação de Problemas: portfolio_01/problemas.md
       - Conclusão: portfolio_01/conclusao.md
-  - Portfólio 02:
+  - Agentes e Ambientes:
       - Impressão Geral: portfolio_02/impressao_geral.md
       - Conceitos: portfolio_02/conceitos.md
       - Materiais extras: portfolio_02/discussoes.md
