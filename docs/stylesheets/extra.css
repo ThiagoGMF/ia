@@ -27,6 +27,26 @@ and background color
   color: blue !important;
 }
 
+.md-typeset code {
+  background-color: #1e2021;
+}
+
+.highlight :-webkit-any(.kc, .n) {
+  color: #beb9b0;
+}
+
+.highlight :-webkit-any(.o, .ow) {
+  color: #beb9b0;
+}
+
+.highlight .p {
+  color: #beb9b0;
+}
+
+.highlight :-webkit-any(.c, .cm, .c1, .ch, .cs, .sd) {
+  color: #beb9b0;
+}
+
 .md-main img {
   display: block !important;
   float: none !important;
