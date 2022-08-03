@@ -7,7 +7,7 @@ Como neste tópico foi citado diversas vezes o termo "complexidade de algortimo"
 <iframe width="560" height="315"  src="https://www.youtube.com/embed/vWd4OtGF9RM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p style="text-indent: 20px; text-align: justify">
-o site <a href="https://visualgo.net/en/dfsbfs" target="blank">visualgo</a> fornece uma visualização animada do funcionamento dos 2 principais algoritmos de travessia em grafos, bfs e dfs, em um grafo aleatoriamente selecionado pelo sistema.
+O site <a href="https://visualgo.net/en/dfsbfs" target="blank">visualgo</a> fornece uma visualização animada do funcionamento dos 2 principais algoritmos de travessia em grafos, bfs e dfs, em um grafo aleatoriamente selecionado pelo sistema. Também é possível visualizar o <a href="https://visualgo.net/en/tsp" target="blank">algoritmo TSP</a>
 </p>
 
 <p style="text-indent: 20px; text-align: justify">
