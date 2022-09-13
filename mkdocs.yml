@@ -45,3 +45,8 @@ nav:
       - Conceitos: portfolio_06/conceitos.md
       - Materiais extras: portfolio_06/discussoes.md
       - Conclusão: portfolio_06/conclusao.md
+  - Filtro de Kalman:
+      - Impressão Geral: portfolio_07/impressao_geral.md
+      - Conceitos: portfolio_07/conceitos.md
+      - Materiais extras: portfolio_07/discussoes.md
+      - Conclusão: portfolio_07/conclusao.md
