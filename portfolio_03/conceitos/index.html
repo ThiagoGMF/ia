@@ -1,0 +1,1561 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/logo/ia.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+    
+    
+      
+        <title>Conceitos - IA - 2022.1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2e8b5541.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conceitos-a-serem-discutidos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IA - 2022.1" class="md-header__button md-logo" aria-label="IA - 2022.1" data-md-component="logo">
+      
+  <img src="../../assets/logo/ia.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IA - 2022.1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conceitos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IA - 2022.1" class="md-nav__button md-logo" aria-label="IA - 2022.1" data-md-component="logo">
+      
+  <img src="../../assets/logo/ia.png" alt="logo">
+
+    </a>
+    IA - 2022.1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Sobre
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Introdução à IA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Introdução à IA" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Introdução à IA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Agentes e Ambientes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Agentes e Ambientes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Agentes e Ambientes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Algoritmos de busca
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algoritmos de busca" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Algoritmos de busca
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Conceitos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Conceitos
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agentes-de-resolucoes-de-problemas" class="md-nav__link">
+    Agentes de resoluções de problemas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-de-problema-de-mundo-simplificado" class="md-nav__link">
+    Exemplo de problema de mundo simplificado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-de-busca" class="md-nav__link">
+    Algoritmos de busca
+  </a>
+  
+    <nav class="md-nav" aria-label="Algoritmos de busca">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#desempenho" class="md-nav__link">
+    Desempenho
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filas-e-pilhas" class="md-nav__link">
+    Filas e Pilhas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#busca-desinformada" class="md-nav__link">
+    Busca desinformada
+  </a>
+  
+    <nav class="md-nav" aria-label="Busca desinformada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#depth-first-search" class="md-nav__link">
+    Depth First Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breadth-first-search" class="md-nav__link">
+    Breadth First Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniform-cost-search" class="md-nav__link">
+    Uniform Cost Search
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#busca-informada" class="md-nav__link">
+    Busca informada
+  </a>
+  
+    <nav class="md-nav" aria-label="Busca informada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#greedy-search" class="md-nav__link">
+    Greedy Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-search" class="md-nav__link">
+    A* Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcoes-heuristicas" class="md-nav__link">
+    Funções Heurísticas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-geneticos" class="md-nav__link">
+    Algoritmos Genéticos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Problemas de Satisfação de Condições
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Problemas de Satisfação de Condições" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Problemas de Satisfação de Condições
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Quantificando Incertezas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quantificando Incertezas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Quantificando Incertezas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Filtro de Kalman
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Filtro de Kalman" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Filtro de Kalman
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_07/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_07/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_07/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agentes-de-resolucoes-de-problemas" class="md-nav__link">
+    Agentes de resoluções de problemas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-de-problema-de-mundo-simplificado" class="md-nav__link">
+    Exemplo de problema de mundo simplificado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-de-busca" class="md-nav__link">
+    Algoritmos de busca
+  </a>
+  
+    <nav class="md-nav" aria-label="Algoritmos de busca">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#desempenho" class="md-nav__link">
+    Desempenho
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filas-e-pilhas" class="md-nav__link">
+    Filas e Pilhas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#busca-desinformada" class="md-nav__link">
+    Busca desinformada
+  </a>
+  
+    <nav class="md-nav" aria-label="Busca desinformada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#depth-first-search" class="md-nav__link">
+    Depth First Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breadth-first-search" class="md-nav__link">
+    Breadth First Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniform-cost-search" class="md-nav__link">
+    Uniform Cost Search
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#busca-informada" class="md-nav__link">
+    Busca informada
+  </a>
+  
+    <nav class="md-nav" aria-label="Busca informada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#greedy-search" class="md-nav__link">
+    Greedy Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-search" class="md-nav__link">
+    A* Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcoes-heuristicas" class="md-nav__link">
+    Funções Heurísticas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-geneticos" class="md-nav__link">
+    Algoritmos Genéticos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="conceitos-a-serem-discutidos">Conceitos a serem discutidos</h1>
+<h2 id="agentes-de-resolucoes-de-problemas">Agentes de resoluções de problemas</h2>
+<p style="text-indent: 20px; text-align: justify">
+Os agentes inteligentes devem maximizar sua medida de desempenho, esse objetivo é às vezes simplificado se o agente pode adotar um objetivo que deseja
+satisfazer. A formulação de objetivos, baseada na situação atual e na medida de desempenho do agente, é o primeiro passo para a resolução de problemas.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Considerando que um objetivo é o conjunto de estados do mundo, a tarefa do agente é descobrir como agir para atingir esse objetivo. A formulação de problemas se trata de definir quais ações estados devem ser considerados dado um objetivo.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Se o agente não possui nenhuma informação sobre o ambiente, ele não terá escolha a não ser tentar uma das ações de forma aleátoria, porém caso o agente conheça o ambiente ele pode decidir previamente quais ações serão tomadas em cada etapa do problema para que o objetivo final seja alcançado.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+O processo de procurar uma sequência de de ações que alcançam o objetivo é chamado de busca, onde um algoritmo de busca recebe um problema como entrada e devolve uma solução, normalmente uma sequência de ações. Depois que a solução é encontrada as ações recomendadas podem ser executadas, essa é a fase de execução.
+</p>
+
+<h2 id="exemplo-de-problema-de-mundo-simplificado">Exemplo de problema de mundo simplificado</h2>
+<p style="text-indent: 20px; text-align: justify">
+Um bom exemplo de um problema em mundo simplificado é o do aspirador de pó, ele pode ser formulado como:
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Estados:</b> Existem duas células, em cada uma delas pode ou não haver sujeira, e o nosso agente, o aspirador de pó, pode estar em qualquer uma delas.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Estado Inicial:</b> Qualquer uma das células.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Ações:</b> Limpar a célula, se mover para a outra célula.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Modelo de transição:</b> limpar a célula remove a sujeira e se mover para a outra célula desloca o agente para a direção da outra célula.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Objetivo:</b> Verificar se todas as células estão limpas
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Custo de ação:</b> Cada passo custa 1
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Todos os possíveis estados desse mundo pode ser observado na imagem abaixo: 
+</p>
+
+<p><img alt="aspirador" src="../../assets/portfolio_03/aspirador.png" /></p>
+<h2 id="algoritmos-de-busca">Algoritmos de busca</h2>
+<p style="text-indent: 20px; text-align: justify">
+Algoritmos de busca exigem uma estrutura de dados para manter o controle da árvore de busca que está sendo construída. Para cada nó n da árvore, temos uma estrutura que contém quatro componentes:
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Estado:</b> O estado no espaço ao qual o nó corresponde.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Pai:</b> O nó na árvore de busca que gerou esse nó.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Ação:</b> A ação que foi aplicada ao pai para gerar o nó
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Custo do caminho:</b> O custo do nó inicial até o nó final.
+</p>
+
+<h3 id="desempenho">Desempenho</h3>
+<p style="text-indent: 20px; text-align: justify">
+O desempenho de um algoritmo pode ser avaliado em 4 aspectos principais:
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Completude:</b> O algoritmo oferece a garantia de encontrar uma solução quando ela existir?
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Otimização de custo:</b> o algoritmo garante o menor custo entre todas as soluções?​
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Complexidade de tempo:</b> Quanto tempo ele leva para encontrar uma solução?
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Complexidade de espaço:</b> Quanta memória é necessária para executar a busca?
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+A complexidade de tempo e a complexidade de espaço de memória são sempre consideradas em relação a alguma medida da dificuldade do problema. Em ciência da computação teórica, a medida típica é o tamanho do grafo do espaço de estados, | V | + | E |, onde V é o conjunto de vértices (nós) do grafo e E é o conjunto de arestas (linhas). 
+</p>
+
+<h3 id="filas-e-pilhas">Filas e Pilhas</h3>
+<p style="text-indent: 20px; text-align: justify">
+Os algoritmos de busca normalmente são executados utilizando as seguintes estrutura de dados: 
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>fila FIFO:</b> O primeiro elemento a ser inserido na estrutura é o primeiro a ser retirado, normalmente utilizado no algoritmo breadth-first search.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>pilha LIFO:</b> O último elemento a ser inserido na estrutura é o primeiro a ser retirado, normalmente utilizado no algoritmo depth-first search, pode ser substituida pela pilha de recursão.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+<b>Fila de prioridade:</b> O primeiro elemento a ser retirado é definido por algum tipo de função, em algumas linguagens, como o C++, essa função retorna o menor valor da fila, é utlizada no algoritmo best-first search.
+</p>
+
+<p><img alt="lifo-fifo" src="../../assets/portfolio_03/lifo-fifo.png" /></p>
+<h3 id="busca-desinformada">Busca desinformada</h3>
+<p style="text-indent: 20px; text-align: justify">
+Esse tipo de busca ocorre quando o agente não possui nenhum tipo de informação adicional sobre os estados, além daquelas fornecidas na definição do problema. Tudo o que elas podem fazer é gerar sucessores e diferenciar um estado objetivo de um estado não objetivo.
+</p>
+
+<h4 id="depth-first-search">Depth First Search</h4>
+<p style="text-indent: 20px; text-align: justify">
+A Depth First Search (DFS) sempre expande o nó mais profundo na
+borda atual da árvore de busca, imediatamente até o nível mais profundo da árvore de busca, onde os nós não têm sucessores. À medida que esses nós são expandidos, eles são retirados da borda e, então, a busca “retorna” ao nó
+seguinte mais profundo que ainda tem sucessores inexplorados.
+</p>
+
+<p><img alt="dfs" src="../../assets/portfolio_03/dfs.gif" /></p>
+<p style="text-indent: 20px; text-align: justify">
+Exemplo de código em Python:
+</p>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Using a Python dictionary to act as an adjacency list</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;5&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="s1">&#39;7&#39;</span><span class="p">],</span>
+  <span class="s1">&#39;3&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">],</span>
+  <span class="s1">&#39;7&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;8&#39;</span><span class="p">],</span>
+  <span class="s1">&#39;2&#39;</span> <span class="p">:</span> <span class="p">[],</span>
+  <span class="s1">&#39;4&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;8&#39;</span><span class="p">],</span>
+  <span class="s1">&#39;8&#39;</span> <span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+
+<span class="n">visited</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span> <span class="c1"># Set to keep track of visited nodes of graph.</span>
+
+<span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">visited</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>  <span class="c1">#function for dfs</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="n">visited</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">neighbour</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">[</span><span class="n">node</span><span class="p">]:</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">visited</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="n">neighbour</span><span class="p">)</span>
+
+<span class="c1"># Driver Code</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Following is the Depth-First Search&quot;</span><span class="p">)</span>
+<span class="n">dfs</span><span class="p">(</span><span class="n">visited</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="breadth-first-search">Breadth First Search</h4>
+<p style="text-indent: 20px; text-align: justify">
+A Breadth First Search (BFS) é uma estratégia simples em que o nó raiz é expandido primeiro, em seguida todos os sucessores do nó raiz são expandidos, e depois os sucessores desses nós, e assim por diante até que todos os nós tenham sido visitados.
+</p>
+
+<p><img alt="bfs" src="../../assets/portfolio_03/bfs.gif" /></p>
+<p style="text-indent: 20px; text-align: justify">
+Exemplo de código em Python:
+</p>
+
+<div class="highlight"><pre><span></span><code><span class="n">graph</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;5&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="s1">&#39;7&#39;</span><span class="p">],</span>
+  <span class="s1">&#39;3&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">],</span>
+  <span class="s1">&#39;7&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;8&#39;</span><span class="p">],</span>
+  <span class="s1">&#39;2&#39;</span> <span class="p">:</span> <span class="p">[],</span>
+  <span class="s1">&#39;4&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;8&#39;</span><span class="p">],</span>
+  <span class="s1">&#39;8&#39;</span> <span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+
+<span class="n">visited</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># List for visited nodes.</span>
+<span class="n">queue</span> <span class="o">=</span> <span class="p">[]</span>     <span class="c1">#Initialize a queue</span>
+
+<span class="k">def</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">visited</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span> <span class="c1">#function for BFS</span>
+  <span class="n">visited</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+  <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+
+  <span class="k">while</span> <span class="n">queue</span><span class="p">:</span>          <span class="c1"># Creating loop to visit each node</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">neighbour</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span>
+      <span class="k">if</span> <span class="n">neighbour</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
+        <span class="n">visited</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">neighbour</span><span class="p">)</span>
+        <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">neighbour</span><span class="p">)</span>
+
+<span class="c1"># Driver Code</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Following is the Breadth-First Search&quot;</span><span class="p">)</span>
+<span class="n">bfs</span><span class="p">(</span><span class="n">visited</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">)</span>    <span class="c1"># function calling</span>
+</code></pre></div>
+<h4 id="uniform-cost-search">Uniform Cost Search</h4>
+<p style="text-indent: 20px; text-align: justify">
+Quando todos os custos de passos forem iguais, a busca em largura será ótima porque sempre expande o nó mais raso não expandido. Através de uma simples extensão, podemos encontrar um algoritmo que é ótimo para qualquer função de custo do passo. Em vez de expandir o nó mais raso, a busca de custo uniforme expande o nó n com o custo de caminho g(n) mais baixo. Isso é feito através do armazenamento da borda como uma fila de prioridade ordenada por g.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Exemplo de código em Python:
+</p>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># returns the minimum cost in a vector( if</span>
+<span class="c1"># there are multiple goal states)</span>
+<span class="k">def</span> <span class="nf">uniform_cost_search</span><span class="p">(</span><span class="n">goal</span><span class="p">,</span> <span class="n">start</span><span class="p">):</span>
+
+    <span class="c1"># minimum cost upto</span>
+    <span class="c1"># goal state from starting</span>
+    <span class="k">global</span> <span class="n">graph</span><span class="p">,</span><span class="n">cost</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># create a priority queue</span>
+    <span class="n">queue</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># set the answer vector to max value</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">goal</span><span class="p">)):</span>
+        <span class="n">answer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">8</span><span class="p">)</span>
+
+    <span class="c1"># insert the starting index</span>
+    <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">start</span><span class="p">])</span>
+
+    <span class="c1"># map to store visited node</span>
+    <span class="n">visited</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># count</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># while the queue is not empty</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+
+        <span class="c1"># get the top element of the</span>
+        <span class="n">queue</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">queue</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="c1"># pop the element</span>
+        <span class="k">del</span> <span class="n">queue</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="c1"># get the original value</span>
+        <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+        <span class="c1"># check if the element is part of</span>
+        <span class="c1"># the goal list</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">goal</span><span class="p">):</span>
+
+            <span class="c1"># get the position</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="n">goal</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+            <span class="c1"># if a new goal is reached</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">answer</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="mi">10</span><span class="o">**</span><span class="mi">8</span><span class="p">):</span>
+                <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="c1"># if the cost is less</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">answer</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+                <span class="n">answer</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+            <span class="c1"># pop the element</span>
+            <span class="k">del</span> <span class="n">queue</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+            <span class="n">queue</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">goal</span><span class="p">)):</span>
+                <span class="k">return</span> <span class="n">answer</span>
+
+        <span class="c1"># check for the non visited nodes</span>
+        <span class="c1"># which are adjacent to present node</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">graph</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]])):</span>
+
+                <span class="c1"># value is multiplied by -1 so that</span>
+                <span class="c1"># least priority is at the top</span>
+                <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">[(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">cost</span><span class="p">[(</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">graph</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]][</span><span class="n">i</span><span class="p">])])</span><span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">graph</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]][</span><span class="n">i</span><span class="p">]])</span>
+
+        <span class="c1"># mark as visited</span>
+        <span class="n">visited</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">answer</span>
+
+<span class="c1"># main function</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="c1"># create the graph</span>
+    <span class="n">graph</span><span class="p">,</span><span class="n">cost</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)],{}</span>
+
+    <span class="c1"># add edge</span>
+    <span class="n">graph</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">graph</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">graph</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">graph</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">graph</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">graph</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">graph</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">graph</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">graph</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">graph</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">graph</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">graph</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="c1"># add the cost</span>
+    <span class="n">cost</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">cost</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">cost</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">cost</span><span class="p">[(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">cost</span><span class="p">[(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">cost</span><span class="p">[(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">cost</span><span class="p">[(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">cost</span><span class="p">[(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">cost</span><span class="p">[(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">cost</span><span class="p">[(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">cost</span><span class="p">[(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">cost</span><span class="p">[(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">7</span>
+
+    <span class="c1"># goal state</span>
+    <span class="n">goal</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># set the goal</span>
+    <span class="c1"># there can be multiple goal states</span>
+    <span class="n">goal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+
+    <span class="c1"># get the answer</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="n">uniform_cost_search</span><span class="p">(</span><span class="n">goal</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># print the answer</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum cost from 0 to 6 is = &quot;</span><span class="p">,</span><span class="n">answer</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># This code is contributed by mohit kumar 29</span>
+</code></pre></div>
+<h3 id="busca-informada">Busca informada</h3>
+<p style="text-indent: 20px; text-align: justify">
+Esta é a estratégia em que utiliza conhecimento de um problema específico além da definição do problema em si, pode encontrar soluções de forma mais eficiente do que uma estratégia de busca desinformada.
+</p>
+
+<h4 id="greedy-search">Greedy Search</h4>
+<p style="text-indent: 20px; text-align: justify">
+A busca gulosa de melhor escolhaa tenta expandir o nó que está mais próximo do objetivo, com o fundamento de que isso pode conduzir a uma solução rapidamente. Assim, ela avalia os nós usando apenas a função heurística, ou seja, f(n) = h(n). A busca gulosa de melhor escolha em árvore também é incompleta, mesmo em um espaço de estados finito, exatamente como a busca em profundidade.
+</p>
+
+<h4 id="a-search">A* Search</h4>
+<p style="text-indent: 20px; text-align: justify">
+A forma de solução mais amplamente conhecida da busca de melhor escolha é chamada de busca A* (pronuncia-se “busca A estrela”). Ela avalia os nós através da combinação de g(n), o custo para alcançar o nó, e h(n), o custo para ir do nó ao objetivo:
+</p>
+
+<p style="text-indent: 20px; text-align: center">
+f(n) = g(n) + h(n).
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Uma vez que g(n) dá o custo do caminho desde o nó inicial até o nó n e h(n) é o custo estimado do
+caminho de menor custo de n até o objetivo, teremos
+</p>
+
+<p style="text-indent: 20px; text-align: center">
+f (n) = custo estimado da solução de menor custo através de n.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Assim, se estamos tentando encontrar a solução de menor custo, algo razoável para tentar emprimeiro lugar, seria o nó com o menor valor de g(n) + h(n). Acontece que essa estratégia é mais do que apenas razoável: desde que a função heurística h(n) satisfaça certas condições, a busca A* será
+completa e ótima. O algoritmo é idêntico à BUSCA-DE-CUSTO-UNIFORME, exceto que A* usa g + h em vez de g.
+</p>
+
+<h4 id="funcoes-heuristicas">Funções Heurísticas</h4>
+<p style="text-indent: 20px; text-align: justify">
+A primeira condição requerida para otimalidade é que h(n) seja uma heurística admissível. Uma heurística admissível é a que nunca superestima o custo de atingir o objetivo. Devido à g(n) ser o custo real para atingir n ao longo do caminho atual, e f(n) = g(n) + h(n), temos como consequência imediata que f(n) nunca irá superestimar o verdadeiro custo de uma solução ao longo do caminho atual através de n.
+</p>
+
+<h2 id="algoritmos-geneticos">Algoritmos Genéticos</h2>
+<p style="text-indent: 20px; text-align: justify">
+Um algoritmo genético é uma técnica de busca utilizada na ciência da computação para achar soluções aproximadas em problemas de otimização e busca, fundamentado principalmente pelo americano John Henry Holland. Algoritmos genéticos são uma classe particular de algoritmos evolutivos que usam técnicas inspiradas pela biologia evolutiva como hereditariedade, mutação, seleção natural e recombinação (ou crossing over).
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Esses algoritmos são implementados como uma simulação de computador em que uma população de representações abstratas de solução é selecionada em busca de soluções melhores. A evolução geralmente se inicia a partir de um conjunto de soluções criado aleatoriamente e é realizada por meio de gerações. A cada geração, a adaptação de cada solução na população é avaliada, alguns indivíduos são selecionados para a próxima geração, e recombinados ou mutados para formar uma nova população. A nova população então é utilizada como entrada para a próxima iteração do algoritmo.
+</p>
+
+<h2 id="referencias">Referências</h2>
+<blockquote>
+<p>RUSSEL, Stuart; NORVIG, Peter. Artificial Intelligence: A modern Approach 3 ed. Elsevier 2009.</p>
+<p>Depth First Search in Python (with Code) | DFS Algorithm, FavTutor. Disponível em: https://favtutor.com/blogs/depth-first-search-python, acesso em 31 de jul. de 2022.</p>
+<p>Breadth First Search in Python (with Code) | BFS Algorithm, FavTutor. Disponível em: https://favtutor.com/blogs/breadth-first-search-python, acesso em 31 de jul. de 2022.</p>
+<p>Uniform-Cost Search (Dijkstra for large Graphs), Geeks For Geeks. Disponível em: https://www.geeksforgeeks.org/uniform-cost-search-dijkstra-for-large-graphs/, acesso em 31 de jul. de 2022.</p>
+<p>Algoritmo genético, Wikpedia. Disponível em: https://pt.wikipedia.org/wiki/Algoritmo_genético, acesso em 31 de jul. de 2022.</p>
+</blockquote>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../impressao_geral/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Impressão Geral" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Impressão Geral
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../discussoes/" class="md-footer__link md-footer__link--next" aria-label="Next: Materiais extras" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Materiais extras
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.48f2be22.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+      
+    
+  </body>
+</html>

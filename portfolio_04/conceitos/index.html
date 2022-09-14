@@ -1,0 +1,1351 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/logo/ia.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+    
+    
+      
+        <title>Conceitos - IA - 2022.1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2e8b5541.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conceitos-a-serem-discutidos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IA - 2022.1" class="md-header__button md-logo" aria-label="IA - 2022.1" data-md-component="logo">
+      
+  <img src="../../assets/logo/ia.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IA - 2022.1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conceitos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IA - 2022.1" class="md-nav__button md-logo" aria-label="IA - 2022.1" data-md-component="logo">
+      
+  <img src="../../assets/logo/ia.png" alt="logo">
+
+    </a>
+    IA - 2022.1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Sobre
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Introdução à IA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Introdução à IA" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Introdução à IA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Agentes e Ambientes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Agentes e Ambientes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Agentes e Ambientes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Algoritmos de busca
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algoritmos de busca" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Algoritmos de busca
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Problemas de Satisfação de Condições
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Problemas de Satisfação de Condições" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Problemas de Satisfação de Condições
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Conceitos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Conceitos
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problemas-de-satisfacao-de-condicoes" class="md-nav__link">
+    Problemas de satisfação de condições
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problema-exemplo-colorindo-mapas" class="md-nav__link">
+    Problema exemplo: Colorindo Mapas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-condicoes" class="md-nav__link">
+    Tipos de condições
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de condições">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unitaria" class="md-nav__link">
+    Unitária
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binaria" class="md-nav__link">
+    Binária
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ternaria" class="md-nav__link">
+    Ternária
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global" class="md-nav__link">
+    Global
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restricoes-de-preferencia" class="md-nav__link">
+    Restrições de preferência
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propagacao-de-condicoes" class="md-nav__link">
+    Propagação de condições
+  </a>
+  
+    <nav class="md-nav" aria-label="Propagação de condições">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consistencia-de-nos" class="md-nav__link">
+    Consistência de Nós
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistencia-de-arco" class="md-nav__link">
+    Consistência de Arco
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistencia-de-caminho" class="md-nav__link">
+    Consistência de Caminho
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistencia-k" class="md-nav__link">
+    Consistência K
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condicoes-globais" class="md-nav__link">
+    Condições Globais
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pesquisa-backtracking-para-csps" class="md-nav__link">
+    Pesquisa Backtracking para CSPs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#busca-local-para-csps" class="md-nav__link">
+    Busca local para CSPs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-dos-problemas" class="md-nav__link">
+    Estrutura dos problemas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Quantificando Incertezas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quantificando Incertezas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Quantificando Incertezas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Filtro de Kalman
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Filtro de Kalman" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Filtro de Kalman
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_07/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_07/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_07/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problemas-de-satisfacao-de-condicoes" class="md-nav__link">
+    Problemas de satisfação de condições
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problema-exemplo-colorindo-mapas" class="md-nav__link">
+    Problema exemplo: Colorindo Mapas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-condicoes" class="md-nav__link">
+    Tipos de condições
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de condições">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unitaria" class="md-nav__link">
+    Unitária
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binaria" class="md-nav__link">
+    Binária
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ternaria" class="md-nav__link">
+    Ternária
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global" class="md-nav__link">
+    Global
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restricoes-de-preferencia" class="md-nav__link">
+    Restrições de preferência
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propagacao-de-condicoes" class="md-nav__link">
+    Propagação de condições
+  </a>
+  
+    <nav class="md-nav" aria-label="Propagação de condições">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consistencia-de-nos" class="md-nav__link">
+    Consistência de Nós
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistencia-de-arco" class="md-nav__link">
+    Consistência de Arco
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistencia-de-caminho" class="md-nav__link">
+    Consistência de Caminho
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistencia-k" class="md-nav__link">
+    Consistência K
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condicoes-globais" class="md-nav__link">
+    Condições Globais
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pesquisa-backtracking-para-csps" class="md-nav__link">
+    Pesquisa Backtracking para CSPs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#busca-local-para-csps" class="md-nav__link">
+    Busca local para CSPs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-dos-problemas" class="md-nav__link">
+    Estrutura dos problemas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="conceitos-a-serem-discutidos">Conceitos a serem discutidos</h1>
+<h2 id="problemas-de-satisfacao-de-condicoes">Problemas de satisfação de condições</h2>
+<p style="text-indent: 20px; text-align: justify">
+Os algoritmos de busca CSPs buscam aproveitar a estrutura de estados e utilizam heurísticas de propósito geral em vez de heurísticas específicas de problemas para permitir a solução de problemas complexos. A ideia principal é eliminar grande parte do espaço de busca de uma vez só através da identificação de combinações de variável/valor que violam as restrições.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Um problema de satisfação de condições consiste em três componentes, X, D e C:
+</p>
+
+<ul>
+<li>X é um conjunto de variáveis, {X1,..., Xn}. </li>
+<li>D é um conjunto de domínios, {D1,...,Dn}, um para cada variável.</li>
+<li>C  é um conjunto de restrições que especificam combinações de valores possíveis.
+</li>
+</ul>
+
+<p style="text-indent: 20px; text-align: justify">
+Para resolver um CSP é necessário definir um conjunto de estados e a noção de solução. Cada estado em um CSP é definido por atribuições de valroes a algumas ou todas as variáveis. Uma atribuição que não viola nenhuma restrição é chamada de atribuição consistente. Uma atribuição completa é aquela em que cada variável é atribuída, e uma solução para um CSP é uma atribuição consistente e completa.
+</p>
+
+<h2 id="problema-exemplo-colorindo-mapas">Problema exemplo: Colorindo Mapas</h2>
+<p><img alt="mapa" src="../../assets/portfolio_04/australia.png" /></p>
+<p style="text-indent: 20px; text-align: justify">
+Considerando o mapa acima, a tarefa é colorir cada região com uma das 3 cores: vermelho, verde ou azul. De forma que duas regiões vizinhas não sejam coloridas com a mesma cor.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Esse problema pode ser visto como um CSP, onde os componentes são:
+</p>
+
+<ul>
+<li>X = { WA, NT, SA, Q , NSW, V, T } </li>
+<li>D = { azul, verde, vermelho } </li>
+<li>C  = { SA ≠ WA, SA ≠ NT, SA ≠ Q, SA ≠ NSW, SA ≠ V, WA ≠ NT, NT ≠ Q, Q ≠ NSW, NSW ≠ V }.
+</li>
+</ul>
+
+<p style="text-indent: 20px; text-align: justify">
+Onde SA ≠ WA é uma abreviação de {{SA, WA}, SA ≠ WA}.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+É possível visualizar um CSP como um grafo de restrições, onde os nós representam as variáveis do problema e uma aresta conecta quaisquer variáveis que participem de uma restrição.
+</p>
+
+<p><img alt="aus_graph" src="../../assets/portfolio_04/australia_graph.png" /></p>
+<h2 id="tipos-de-condicoes">Tipos de condições</h2>
+<h3 id="unitaria">Unitária</h3>
+<p style="text-indent: 20px; text-align: justify">
+Restringe o valor de uma única variável. Por exemplo, no probema de coloração do mapa poderia existir uma restrição que impedisse de colorir a região de Victoria com a cor azul. Isso pode ser expresso da forma { V ≠ azul }.
+</p>
+
+<h3 id="binaria">Binária</h3>
+<p style="text-indent: 20px; text-align: justify">
+Relaciona duas variáveis, por exemplo WA ≠ NT.
+</p>
+
+<h3 id="ternaria">Ternária</h3>
+<p style="text-indent: 20px; text-align: justify">
+Relaciona três variáveis, por exemplo X > Y > Z.
+</p>
+
+<h3 id="global">Global</h3>
+<p style="text-indent: 20px; text-align: justify">
+Envolve um número arbitrário de variáveis, não necessáriamente todas as variáveis do problema.
+</p>
+
+<h3 id="restricoes-de-preferencia">Restrições de preferência</h3>
+<p style="text-indent: 20px; text-align: justify">
+Indica as soluções preferidas.
+</p>
+
+<h2 id="propagacao-de-condicoes">Propagação de condições</h2>
+<p style="text-indent: 20px; text-align: justify">
+Na busca regular em espaços de estados, um algoritmo pode fazer apenas uma coisa: busca. Em CSPs há uma escolha: um algoritmo pode buscar (escolher uma nova atribuição para a variável de várias possibilidades) ou fazer um tipo específico de inferência chamada propagação de restrições:
+utilizando as restrições para reduzir o número de valores válidos para uma variável, o que, por sua vez, pode reduzir os valores válidos para outra variável, e assim por diante. A propagação de restrição pode ser interligada com a busca ou pode ser feita como uma etapa de pré-processamento, antes que a busca seja iniciada. Às vezes, esse pré-processamento pode resolver todo o problema e, assim, não é requerida nenhuma busca.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+A ideia-chave é a consistência local. Se tratarmos cada variável como um nó em um grafo e cada restrição binária como um arco, o processo de aplicar a consistência local em cada parte do grafo faz com que os valores inconsistentes sejam eliminados em todo o grafo. Existem diferentes tipos de consitência local.
+</p>
+
+<h3 id="consistencia-de-nos">Consistência de Nós</h3>
+<p style="text-indent: 20px; text-align: justify">
+Uma variável, ou o nó, no caso de grafos, é nó-consistente se todos os valores no domínio da variável satisfazem as restrições unárias da variável. Por exemplo, no exemplo do mapa da Austrália poderiamos adicionar a restrição de que a região de Victoria não pode assumir a cor Verde, então o domínio inicial { azul, verde, vermelho }, seria transformado em { azul, vermelho } para que fosse transformada em nó-consistente. O Grafo é nó-consistente se todos os nós forem nó-consistentes.
+</p>
+
+<h3 id="consistencia-de-arco">Consistência de Arco</h3>
+<p style="text-indent: 20px; text-align: justify">
+Uma variável em um CSP é arco-consistente se todos os valores em seu domínio satisfizerem as restrições binárias da variável. Um grafo é arco-consistente se cada variável for arco-consistente com todas as outras variáveis.
+</p>
+
+<h3 id="consistencia-de-caminho">Consistência de Caminho</h3>
+<p style="text-indent: 20px; text-align: justify">
+A consistência de caminho fixa as restrições binárias utilizando restrições implícitas que são inferidas pela verificação das triplas de variáveis. Um conjunto de duas variáveis { Xi, Xj } é caminho-consistente em relação a uma terceira variável Xm se, para cada atribuição { Xi = a, Xj = b} consistente com as restrições em { Xi, Xj }, houver uma atribuição para Xm que satisfaça as restrições em { Xi, Xm } e { Xm, Xj }.
+</p>
+
+<h3 id="consistencia-k">Consistência K</h3>
+<p style="text-indent: 20px; text-align: justify">
+O CSP é k-consistente se, para qualquer conjunto de k − 1 variáveis e para qualquer atribuição consistente para aquelas variáveis, um valor consistente puder sempre ser atribuído a para a k-ésima variável. 1- consistência determina que, dado o conjunto vazio, podemos tornar qualquer conjunto de uma
+variável consistente: isso é o que se chama consistência de nó. 2-consistência é a consistência de arco. Para grafos de restrição binária, 3-consistência é a consistência de caminho.
+</p>
+
+<h3 id="condicoes-globais">Condições Globais</h3>
+<p style="text-indent: 20px; text-align: justify">
+Algoritmo simples: primeiro, retire qualquer variável da restrição que
+tenha um domínio avulso e exclua o valor dessa variável dos domínios das variáveis restantes. Repita enquanto existirem variáveis avulsas. Se em algum momento for produzido um domínio vazio ou restarem mais variáveis do que valores de domínio, foi detectada uma inconsistência.
+</p>
+
+<h2 id="pesquisa-backtracking-para-csps">Pesquisa Backtracking para CSPs</h2>
+<p style="text-indent: 20px; text-align: justify">
+A expressão busca com retrocesso é utilizada para indicar uma busca em profundidade que escolhe valores para uma variável de cada vez e que efetua o retrocesso quando uma variável não tem valores válidos restantes a serem atribuídos. Ele escolhe repetidamente uma variável não atribuída e depois experimenta todos os valores no domínio da variável, por vez, tentando encontrar uma solução. Se for detectada uma inconsistência a função retorna falha, fazendo com que a chamada anterior tente outro valor.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+O algoritmo de backtracking pode ser melhorado usando heurísticas independentes de domínio, como por exemplo, ordenação de variáveis e valores,
+</p>
+
+<h2 id="busca-local-para-csps">Busca local para CSPs</h2>
+<p style="text-indent: 20px; text-align: justify">
+Os algoritmos de busca local se mostram muito eficazes na resolução de vários CPSs. Eles utilizam uma formulação de estados completos: o estado inicial atribui um valor a cada variável e a busca altera o valor de uma variável de cada vez.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Normalmente, o palpite inicial viola várias restrições. O ponto de busca local é eliminar as restrições violadas.
+Na escolha de um novo valor para uma variável, a heurística mais óbvia é selecionar o valor que resulta no número mínimo de conflitos com outras variáveis — a heurística de conflitos mínimos.
+</p>
+
+<h2 id="estrutura-dos-problemas">Estrutura dos problemas</h2>
+<p style="text-indent: 20px; text-align: justify">
+Uma das formas de lidar com problemas complexos é dividi-los em subproblemas mais simples.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+A independência de solução pode ser checada simplesmente procurando por componentes conectados no grafo de restrições, cada componente corresponde a um subproblema CSP.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Problemas completamente independentes são raros, mas, felizmente, algumas outras estuturas de grafos também são fáceis de resolver, por exemplo, um grafo de restrição é uma árvore quando duas variáveis quaisquerestiver ligadas por apenas uma aresta, e qualquer CSP estruturado em árvore pode ser resolvido em tempo linear em relação ao número de nós.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+O ponto por trás disso é uma nova noção de consistência, chamada de consistência orientada de arco. O CSP é definido como arco orientado consistente sob uma ordenação de variáveis X1, X2, ..., Xn se e somente se cada Xi for arco-consistente com cada Xj para j > i.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Para resolver um CSP estruturado em árvore, primeiramente é escolhido um nó para ser a raiz da árvore e então uma ordenação das variáveis de tal forma que cada variável apareça após o seu pai na árvore, isso é denominado ordenação topológica.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Qualquer árvore com N nós tem N-1 arestas, então é possível transformar esse grafo em arco-orientado consistente em N etapas. Uma vez que tenhamos um grafo arco-orientado consistente, podemos proceder diretamente à lista de variáveis e escolher algum valor restante, desde que cada ligação de um pai com seu filho seja arco-consistente, sabe-se que, para qualquer valor que seja definido como o pai, haverá um valor válido para o filho, o que significa que não será necessário retroceder, o que permite que prossigamos linearmente com o algoritmo de busca.
+</p>
+
+<blockquote>
+<p>RUSSEL, Stuart; NORVIG, Peter. Artificial Intelligence: A modern Approach 3 ed. Elsevier 2009.</p>
+</blockquote>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../impressao_geral/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Impressão Geral" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Impressão Geral
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../discussoes/" class="md-footer__link md-footer__link--next" aria-label="Next: Materiais extras" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Materiais extras
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.48f2be22.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+      
+    
+  </body>
+</html>

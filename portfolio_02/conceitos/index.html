@@ -1,0 +1,1355 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/logo/ia.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+    
+    
+      
+        <title>Conceitos - IA - 2022.1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2e8b5541.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conceitos-a-serem-discutidos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IA - 2022.1" class="md-header__button md-logo" aria-label="IA - 2022.1" data-md-component="logo">
+      
+  <img src="../../assets/logo/ia.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IA - 2022.1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conceitos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IA - 2022.1" class="md-nav__button md-logo" aria-label="IA - 2022.1" data-md-component="logo">
+      
+  <img src="../../assets/logo/ia.png" alt="logo">
+
+    </a>
+    IA - 2022.1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Sobre
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Introdução à IA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Introdução à IA" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Introdução à IA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_01/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Agentes e Ambientes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Agentes e Ambientes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Agentes e Ambientes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Conceitos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Conceitos
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ambientes-de-tarefa" class="md-nav__link">
+    Ambientes de tarefa
+  </a>
+  
+    <nav class="md-nav" aria-label="Ambientes de tarefa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#completamente-observavel-vs-parcialmente-observavel" class="md-nav__link">
+    Completamente observável vs Parcialmente Observável
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agente-unico-vs-multiagente" class="md-nav__link">
+    Agente único vs multiagente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deterministico-vs-estocastico" class="md-nav__link">
+    Determinístico vs Estocástico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#episodico-vs-sequencial" class="md-nav__link">
+    Episódico vs Sequencial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estatico-vs-dinamico" class="md-nav__link">
+    Estático vs Dinâmico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discreto-vs-continuo" class="md-nav__link">
+    Discreto vs contínuo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conhecido-vs-desconhecido" class="md-nav__link">
+    Conhecido vs Desconhecido
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#racionalidade" class="md-nav__link">
+    Racionalidade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agentes" class="md-nav__link">
+    Agentes
+  </a>
+  
+    <nav class="md-nav" aria-label="Agentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agentes-de-reflexo-simples" class="md-nav__link">
+    Agentes de reflexo simples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agentes-de-reflexo-baseado-em-modelo" class="md-nav__link">
+    Agentes de reflexo baseado em modelo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agentes-baseados-em-objetivos" class="md-nav__link">
+    Agentes baseados em objetivos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agentes-utilitarios" class="md-nav__link">
+    Agentes utilitários
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representacao-de-estados" class="md-nav__link">
+    Representação de estados
+  </a>
+  
+    <nav class="md-nav" aria-label="Representação de estados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atomico" class="md-nav__link">
+    Atômico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fatorado" class="md-nav__link">
+    Fatorado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estruturado" class="md-nav__link">
+    Estruturado
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Algoritmos de busca
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algoritmos de busca" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Algoritmos de busca
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Problemas de Satisfação de Condições
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Problemas de Satisfação de Condições" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Problemas de Satisfação de Condições
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Quantificando Incertezas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quantificando Incertezas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Quantificando Incertezas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Filtro de Kalman
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Filtro de Kalman" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Filtro de Kalman
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_07/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_07/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_07/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ambientes-de-tarefa" class="md-nav__link">
+    Ambientes de tarefa
+  </a>
+  
+    <nav class="md-nav" aria-label="Ambientes de tarefa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#completamente-observavel-vs-parcialmente-observavel" class="md-nav__link">
+    Completamente observável vs Parcialmente Observável
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agente-unico-vs-multiagente" class="md-nav__link">
+    Agente único vs multiagente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deterministico-vs-estocastico" class="md-nav__link">
+    Determinístico vs Estocástico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#episodico-vs-sequencial" class="md-nav__link">
+    Episódico vs Sequencial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estatico-vs-dinamico" class="md-nav__link">
+    Estático vs Dinâmico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discreto-vs-continuo" class="md-nav__link">
+    Discreto vs contínuo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conhecido-vs-desconhecido" class="md-nav__link">
+    Conhecido vs Desconhecido
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#racionalidade" class="md-nav__link">
+    Racionalidade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agentes" class="md-nav__link">
+    Agentes
+  </a>
+  
+    <nav class="md-nav" aria-label="Agentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agentes-de-reflexo-simples" class="md-nav__link">
+    Agentes de reflexo simples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agentes-de-reflexo-baseado-em-modelo" class="md-nav__link">
+    Agentes de reflexo baseado em modelo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agentes-baseados-em-objetivos" class="md-nav__link">
+    Agentes baseados em objetivos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agentes-utilitarios" class="md-nav__link">
+    Agentes utilitários
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representacao-de-estados" class="md-nav__link">
+    Representação de estados
+  </a>
+  
+    <nav class="md-nav" aria-label="Representação de estados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atomico" class="md-nav__link">
+    Atômico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fatorado" class="md-nav__link">
+    Fatorado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estruturado" class="md-nav__link">
+    Estruturado
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="conceitos-a-serem-discutidos">Conceitos a serem discutidos</h1>
+<h2 id="ambientes-de-tarefa">Ambientes de tarefa</h2>
+<p style="text-indent: 20px; text-align: justify">
+Ambientes são essencialmente os "problemas" para quais os agentes racionais são projetados para resolverem. Existem vários tipos de ambientes, e cada tipo, afeta diretamente o projeto apropriado para o programa do agente. Ao projetar um agente, a primeira tarefa deve ser sempre especificar o ambiente de tarefa de forma tão complexa quanto possível.
+</p>
+
+<h3 id="completamente-observavel-vs-parcialmente-observavel">Completamente observável vs Parcialmente Observável</h3>
+<p style="text-indent: 20px; text-align: justify">
+Se os sensores de um agente permitem acesso ao estado completo do ambiente em cada instante, detectando todos os aspectos que são relevantes para a escolha da ação, então o ambiente de tarefa é completamente observável, esse tipo de ambiente é conviente pois o agente não precisa manter qualquer estado interno para acompanhar as mudanças do mundo.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Um ambiente pode ser parcialmente observável devido a algum ruído, a sensores imprecisos ou porque partes do estado estão fora do alcance do sensor. O ambiente será não observável se o agente não possuir sensores.
+</p>
+
+<h3 id="agente-unico-vs-multiagente">Agente único vs multiagente</h3>
+<p style="text-indent: 20px; text-align: justify">
+Um agente que resolve um jogo de palavras cruzadas sozinho é um agente único, enquanto um agente que joga xadrez é um multiagente. Apesar de simples é preciso se atentar a algumas sutilezas, como por exemplo se uma entidade pode ou não ser vista como um agente, multiagentes podem ser classificados em competitivos ou cooperativos.
+</p>
+
+<h3 id="deterministico-vs-estocastico">Determinístico vs Estocástico</h3>
+<p style="text-indent: 20px; text-align: justify">
+Caso o próximo estado do ambiente seja completamente determinado pelo estado atual e pela ação a ser executada pelo agente, então o ambiente é determinístico, caso contrário, ele é estocástico. Um ambiente não determinístico é aquele em que as ações são caracterizadas por seus possíveis resultados, sem probabilidade associada a ele.
+</p>
+
+<h3 id="episodico-vs-sequencial">Episódico vs Sequencial</h3>
+<p style="text-indent: 20px; text-align: justify">
+Um ambiente é episódico se a experiência do agente pode ser dividida em episódios atômicos, onde em cada um o agente recebe uma percepção e em seguida executa uma única ação, é essencial que o próximo episódio não dependa das ações exxecutadas em episódios anteriores.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Um ambiente sequencial, uma decisão em um episódio pode afetar todas as decisões futuras, são exemplos desses ambientes: um jogo de xadrez e dirigir.
+</p>
+
+<h3 id="estatico-vs-dinamico">Estático vs Dinâmico</h3>
+<p style="text-indent: 20px; text-align: justify">
+Um ambiente dinâmico é aquele que pode ser alterado enquanto um agente está utilizando-o, caso contrário o ambiente é estático. Ambientes estáticos são fáceis de manipular pois o agente não precisa continuar a observar o mundo enquanto age, nem se preocupar com a passagem do tempo, já ambientes dinâmicos estão sempre perguntando ao agente o que ele deseja fazer. Caso o ambiente não muda com a passagem do tempo, mas o nível de desempenho do agente se altera, então o ambiente é semidinâmico.
+</p>
+
+<h3 id="discreto-vs-continuo">Discreto vs contínuo</h3>
+<p style="text-indent: 20px; text-align: justify">
+A distinção entre discreto e contínuo aplica-se ao estado do ambiente, ao modo como o tempo é tratado, e às percepções e ações do agente. Por exemplo, um jogo de xadrez tem um número finito de estados distintos e um conjunto discreto de percepções e ações.
+</p>
+
+<h3 id="conhecido-vs-desconhecido">Conhecido vs Desconhecido</h3>
+<p style="text-indent: 20px; text-align: justify">
+Essa distinção não se refere ao ambiente em si, mas ao estado de conhecimento do agente, ou do projetista, sobre as "leis da física" no meio ambiente.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+O caso mais difícil seria um onde o ambiente pode ser classificado como parcialmente observável, multiagente, estocástico, sequencial, dinâmico, contínuo e desconhecido. Dirigir é difícil em todos esses sentidos, exceto que para a maioria dos motoristas o ambiente é conhecido.
+</p>
+
+<h2 id="racionalidade">Racionalidade</h2>
+<p style="text-indent: 20px; text-align: justify">
+A definição do que é racional em qualquer instante dado depende de 4 fatores: A medida do desempenho que define o critério de sucesso, o conhecimento prévio que o agente tem do ambiente, as ações que o agente pode executar e por fim, a sequência de percepções do agente até o momento.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Um agente racional é aquele que faz tudo certo, em termos conceituais, toda entrada na tabela correspondente à função do agente é preenchida de forma correta. Para medir o desempenho do agente é preciso observar a sequência de estados do ambiente após as interações do agente, se a sequência for desejável, o agente teve um bom desempenho, onde essa noção de "desejável" é alcançada por uma medida de desempenho que avalia toda e qualquer sequência dada dos estados do ambiente.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+É preciso ter o cuidado de distinguir racionalidade de inisciência, um agente onisciente sabe o resultado real de cada uma de suas ações e age de acordo com ele, a racionalidade maximiza o desempenho esperado. Uma escolha racional só depende da sequência de percepções até o momento atual.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Um agente racional deve ser capaz não apenas de coletar informações, mas também de aprender com o que ele percebe, um agente que se baseia no conhecimento anterior de seu projetista e não em suas próprias percepções é um agente sem autonomia.
+</p>
+
+<h2 id="agentes">Agentes</h2>
+<p><img alt="agents" src="../../assets/portfolio_02/agents.png" /></p>
+<p style="text-indent: 20px; text-align: justify">
+Um agente é qualquer coisa que pode perceber seu ambiente através de sensores e agir sobre este ambiente através de atuadores. Um agente humano tem olhos, ouvidos e outros órgãos como sensores, e tem mãos, pernas, e outras partes do corpo que servem como atuadores.
+</p>
+
+<p style="text-indent: 20px; text-align: justify">
+Em termos matemáticos, o comportamento do agente é descrito pela função do agente que mapeia qualquer sequência de percepções específica para uma ação. Enquanto que o programa do agente é uma implementação concreta, executada em um sistema físico.
+</p>
+
+<h3 id="agentes-de-reflexo-simples">Agentes de reflexo simples</h3>
+<p style="text-indent: 20px; text-align: justify">
+Esses agentes selecionam ações com base na percepção atual, ignorando o restante do histórico de percepções, são do tipo <b>se</b> <i>condição</i> <b>então</b> <i>ação</i>.
+</p>
+
+<h3 id="agentes-de-reflexo-baseado-em-modelo">Agentes de reflexo baseado em modelo</h3>
+<p style="text-indent: 20px; text-align: justify">
+O agente monitora parte do mundo que ele não pode ver agora, ou seja, o agente mantém algum tipo de estado interno que depende do histórico de percepções e assim reflete pelo menos alguns dos aspectos não observados do estado atual.
+</p>
+
+<h3 id="agentes-baseados-em-objetivos">Agentes baseados em objetivos</h3>
+<p style="text-indent: 20px; text-align: justify">
+Nem sempre conhecer algo sobre o estado atual é o suficiente para tomar uma ação, as vez também é necessário um objetivo que descreva situações desejáveis.
+</p>
+
+<h3 id="agentes-utilitarios">Agentes utilitários</h3>
+<p style="text-indent: 20px; text-align: justify">
+Sozinhos, os objetivos não são realmente suficientes para gerar um comportamento de alta qualidade na maioria dos ambientes, os agentes utilitários tendem a adicionar alguma característica a mais ao objetivo, como por exemplo, velocidade, segurança, economia, etc.
+</p>
+
+<h2 id="representacao-de-estados">Representação de estados</h2>
+<p><img alt="data_types" src="../../assets/portfolio_02/data_types.png" /></p>
+<h3 id="atomico">Atômico</h3>
+<p style="text-indent: 20px; text-align: justify">
+Cada estado do mundo é indivisível, não tem estrutura interna.
+</p>
+
+<h3 id="fatorado">Fatorado</h3>
+<p style="text-indent: 20px; text-align: justify">
+Um estado consiste em um vetor de valores de atributos; os valores podem ser booleanos, valores reais ou um conjunto fixo de símbolos.
+</p>
+
+<h3 id="estruturado">Estruturado</h3>
+<p style="text-indent: 20px; text-align: justify">
+Um estado inclui objetos; cada um deles podem ter atributos próprios, bem como relacionamentos com outros objetos
+</p>
+
+<h2 id="referencias">Referências</h2>
+<blockquote>
+<p>RUSSEL, Stuart; NORVIG, Peter. Artificial Intelligence: A modern Approach 3 ed. Elsevier 2009.</p>
+</blockquote>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../impressao_geral/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Impressão Geral" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Impressão Geral
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../discussoes/" class="md-footer__link md-footer__link--next" aria-label="Next: Materiais extras" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Materiais extras
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.48f2be22.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+      
+    
+  </body>
+</html>

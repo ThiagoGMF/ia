@@ -1,0 +1,1428 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/logo/ia.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+    
+    
+      
+        <title>Apresentação de Problemas - IA - 2022.1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2e8b5541.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#apresentacao-de-problemas-relacionados" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IA - 2022.1" class="md-header__button md-logo" aria-label="IA - 2022.1" data-md-component="logo">
+      
+  <img src="../../assets/logo/ia.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IA - 2022.1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Apresentação de Problemas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IA - 2022.1" class="md-nav__button md-logo" aria-label="IA - 2022.1" data-md-component="logo">
+      
+  <img src="../../assets/logo/ia.png" alt="logo">
+
+    </a>
+    IA - 2022.1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Sobre
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Introdução à IA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Introdução à IA" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Introdução à IA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Apresentação de Problemas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Apresentação de Problemas
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-inteligencia" class="md-nav__link">
+    O que é inteligência ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-inteligencia-artificial" class="md-nav__link">
+    O que é inteligência artificial ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quais-as-areas-do-conhecimento-que-contribuem-para-o-campo-de-ia-e-quais-suas-contribuicoes" class="md-nav__link">
+    Quais as áreas do conhecimento que contribuem para o campo de IA e quais suas contribuições ?
+  </a>
+  
+    <nav class="md-nav" aria-label="Quais as áreas do conhecimento que contribuem para o campo de IA e quais suas contribuições ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filosofia" class="md-nav__link">
+    Filosofia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matematica" class="md-nav__link">
+    Matemática
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#economia" class="md-nav__link">
+    Economia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neurociencia" class="md-nav__link">
+    Neurociência
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psicologia" class="md-nav__link">
+    Psicologia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engenharia-da-computacao" class="md-nav__link">
+    Engenharia da Computação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cibernetica" class="md-nav__link">
+    Cibernética
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linguistica" class="md-nav__link">
+    Linguística
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-foi-o-dartmouth-summer-research-project-on-artificial-intelligence-de-1956" class="md-nav__link">
+    O que foi o Dartmouth Summer Research Project on Artificial Intelligence de 1956 ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-sao-os-invernos-de-ia" class="md-nav__link">
+    O que são os invernos de IA ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explique-o-que-e-o-problema-da-porta-xor-e-por-que-esse-problema-gerou-um-desanimo-na-area-de-redes-neurais" class="md-nav__link">
+    Explique o que é o problema da porta XOR e por quê esse problema gerou um desânimo na área de redes neurais.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explique-o-que-a-ia-pode-fazer-hoje-em-relacao-a-fala-o-biomimetismo-a-exploracao-espacial-jogos-navegacao-na-internet-veiculos-autonomos-e-vigilancia" class="md-nav__link">
+    Explique o que a IA pode fazer hoje em relação a: fala, o biomimetismo, a exploração espacial, jogos, navegação na internet, veículos autônomos e vigilância.
+  </a>
+  
+    <nav class="md-nav" aria-label="Explique o que a IA pode fazer hoje em relação a: fala, o biomimetismo, a exploração espacial, jogos, navegação na internet, veículos autônomos e vigilância.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fala" class="md-nav__link">
+    Fala
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#biomimetismo" class="md-nav__link">
+    Biomimetismo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploracao-espacial" class="md-nav__link">
+    Exploração espacial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jogos" class="md-nav__link">
+    Jogos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navegacao-na-internet" class="md-nav__link">
+    Navegação na Internet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#veiculos-autonomos" class="md-nav__link">
+    Veículos autônomos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vigilancia" class="md-nav__link">
+    Vigilância
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discorra-sobre-os-impactos-da-ia-na-sociedade-humana-considerando-vantagens-e-riscos" class="md-nav__link">
+    Discorra sobre os impactos da IA na sociedade humana, considerando vantagens e riscos.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Agentes e Ambientes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Agentes e Ambientes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Agentes e Ambientes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_02/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Algoritmos de busca
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algoritmos de busca" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Algoritmos de busca
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_03/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Problemas de Satisfação de Condições
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Problemas de Satisfação de Condições" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Problemas de Satisfação de Condições
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/problemas/" class="md-nav__link">
+        Apresentação de Problemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_04/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Quantificando Incertezas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quantificando Incertezas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Quantificando Incertezas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/discussoes/" class="md-nav__link">
+        Materiais extras
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_06/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Filtro de Kalman
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Filtro de Kalman" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Filtro de Kalman
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_07/impressao_geral/" class="md-nav__link">
+        Impressão Geral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_07/conceitos/" class="md-nav__link">
+        Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio_07/conclusao/" class="md-nav__link">
+        Conclusão
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-inteligencia" class="md-nav__link">
+    O que é inteligência ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-inteligencia-artificial" class="md-nav__link">
+    O que é inteligência artificial ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quais-as-areas-do-conhecimento-que-contribuem-para-o-campo-de-ia-e-quais-suas-contribuicoes" class="md-nav__link">
+    Quais as áreas do conhecimento que contribuem para o campo de IA e quais suas contribuições ?
+  </a>
+  
+    <nav class="md-nav" aria-label="Quais as áreas do conhecimento que contribuem para o campo de IA e quais suas contribuições ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filosofia" class="md-nav__link">
+    Filosofia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matematica" class="md-nav__link">
+    Matemática
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#economia" class="md-nav__link">
+    Economia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neurociencia" class="md-nav__link">
+    Neurociência
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psicologia" class="md-nav__link">
+    Psicologia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engenharia-da-computacao" class="md-nav__link">
+    Engenharia da Computação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cibernetica" class="md-nav__link">
+    Cibernética
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linguistica" class="md-nav__link">
+    Linguística
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-foi-o-dartmouth-summer-research-project-on-artificial-intelligence-de-1956" class="md-nav__link">
+    O que foi o Dartmouth Summer Research Project on Artificial Intelligence de 1956 ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-sao-os-invernos-de-ia" class="md-nav__link">
+    O que são os invernos de IA ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explique-o-que-e-o-problema-da-porta-xor-e-por-que-esse-problema-gerou-um-desanimo-na-area-de-redes-neurais" class="md-nav__link">
+    Explique o que é o problema da porta XOR e por quê esse problema gerou um desânimo na área de redes neurais.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explique-o-que-a-ia-pode-fazer-hoje-em-relacao-a-fala-o-biomimetismo-a-exploracao-espacial-jogos-navegacao-na-internet-veiculos-autonomos-e-vigilancia" class="md-nav__link">
+    Explique o que a IA pode fazer hoje em relação a: fala, o biomimetismo, a exploração espacial, jogos, navegação na internet, veículos autônomos e vigilância.
+  </a>
+  
+    <nav class="md-nav" aria-label="Explique o que a IA pode fazer hoje em relação a: fala, o biomimetismo, a exploração espacial, jogos, navegação na internet, veículos autônomos e vigilância.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fala" class="md-nav__link">
+    Fala
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#biomimetismo" class="md-nav__link">
+    Biomimetismo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploracao-espacial" class="md-nav__link">
+    Exploração espacial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jogos" class="md-nav__link">
+    Jogos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navegacao-na-internet" class="md-nav__link">
+    Navegação na Internet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#veiculos-autonomos" class="md-nav__link">
+    Veículos autônomos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vigilancia" class="md-nav__link">
+    Vigilância
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discorra-sobre-os-impactos-da-ia-na-sociedade-humana-considerando-vantagens-e-riscos" class="md-nav__link">
+    Discorra sobre os impactos da IA na sociedade humana, considerando vantagens e riscos.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="apresentacao-de-problemas-relacionados">Apresentação de Problemas relacionados</h1>
+<p style="text-indent: 20px; text-align: justify">
+Neste primeiro portfólio este tópico será apresentado a partir da solução de uma lista de 8 questões propostas pelo professor da disciplina.
+</p>
+
+<h2 id="o-que-e-inteligencia">O que é inteligência ?</h2>
+<p style="text-indent: 20px; text-align: justify">
+Segundo o dicionário, inteligência é a faculdade de conhecer, compreender e aprender.
+</p>
+
+<p><img alt="jean_piaget" src="../../assets/portfolio_01/jean_piaget.jpg" /></p>
+<p style="text-indent: 20px; text-align: justify">
+Segundo o Jean Piaget(1986-1980), um dos mais importantes pensadores do século XX, inteligência é a solução de um problema novo para o indivíduo, é a coordenação dos meios para atingir um determinado fim, que não é acessível de maneira direta.
+</p>
+
+<h2 id="o-que-e-inteligencia-artificial">O que é inteligência artificial ?</h2>
+<p style="text-indent: 20px; text-align: justify">
+O termo “inteligência artificial” nasceu em 1956 no famoso encontro de Dartmouth e é, basicamente, um ramo de pesquisa da computação que busca fazer com que sistemas ou máquinas sejam capazes de imitar a inteligência humana com o objetivo de realizar tarefas, as IAs também podem se aprimorar iterativamente com base nas informações que coletam.
+</p>
+
+<h2 id="quais-as-areas-do-conhecimento-que-contribuem-para-o-campo-de-ia-e-quais-suas-contribuicoes">Quais as áreas do conhecimento que contribuem para o campo de IA e quais suas contribuições ?</h2>
+<h3 id="filosofia">Filosofia</h3>
+<p style="text-indent: 20px; text-align: justify">
+Refinamento das ideias e compreensão do universo ao qual a máquina está contida.
+</p>
+
+<h3 id="matematica">Matemática</h3>
+<p style="text-indent: 20px; text-align: justify">
+Representação do problema de uma forma que possa ser entendido e resolvido por máquinas.
+</p>
+
+<h3 id="economia">Economia</h3>
+<p style="text-indent: 20px; text-align: justify">
+Análise de riscos e ganhos em um futuro não tão próximo.
+</p>
+
+<h3 id="neurociencia">Neurociência</h3>
+<p style="text-indent: 20px; text-align: justify">
+Como a informação deve ser processada.
+</p>
+
+<h3 id="psicologia">Psicologia</h3>
+<p style="text-indent: 20px; text-align: justify">
+Como os seres humanos pensam.
+</p>
+
+<h3 id="engenharia-da-computacao">Engenharia da Computação</h3>
+<p style="text-indent: 20px; text-align: justify">
+Avanços na construção de hardware, que interferem diretamente na capacidade do sistema em executar suas tarefas.
+</p>
+
+<h3 id="cibernetica">Cibernética</h3>
+<p style="text-indent: 20px; text-align: justify">
+Como operar as máquinas para que elas possam realizar seus objetivos.
+</p>
+
+<h3 id="linguistica">Linguística</h3>
+<p style="text-indent: 20px; text-align: justify">
+Relacionamento entre a linguagem e o pensamento.
+</p>
+
+<h2 id="o-que-foi-o-dartmouth-summer-research-project-on-artificial-intelligence-de-1956">O que foi o Dartmouth Summer Research Project on Artificial Intelligence de 1956 ?</h2>
+<p style="text-indent: 20px; text-align: justify">
+Foi um workshop que reuniu algumas das mais brilhantes mentes da computação, é considerado o marco inicial da inteligência artificial. Este encontro foi baseado na ideia de que todos os aspectos da aprendizagem ou qualquer outra característica da inteligência podem ser descritos com tanta precisão que uma máquina pode ser capaz de simulá-los.
+</p>
+
+<h2 id="o-que-sao-os-invernos-de-ia">O que são os invernos de IA ?</h2>
+<p style="text-indent: 20px; text-align: justify">
+Os invernos de IA foram períodos em que as expectativas sobre as possibilidades da inteligência artificial entravam em declínio, juntamente com isso os investimentos na área também diminuíram, levando algumas empresas à falência.
+</p>
+
+<h2 id="explique-o-que-e-o-problema-da-porta-xor-e-por-que-esse-problema-gerou-um-desanimo-na-area-de-redes-neurais">Explique o que é o problema da porta XOR e por quê esse problema gerou um desânimo na área de redes neurais.</h2>
+<p style="text-indent: 20px; text-align: justify">
+Os primeiros algoritmos de inteligência artificial utilizavam o Perceptron como método para pesar evidências a fim de tomar decisões.
+</p>
+
+<p><img alt="hiperplano" src="../../assets/portfolio_01/hiperplano.png" /></p>
+<p style="text-indent: 20px; text-align: justify">
+O problema é que um único Perceptron consegue resolver apenas problemas que possam ser representados como funções linearmente separáveis e no mundo real os dados raramente são representados dessa forma, um exemplo simples é a porta xor.
+</p>
+
+<p><img alt="and_or_not" src="../../assets/portfolio_01/and_or_not.png" />
+<img alt="hiperplano" src="../../assets/portfolio_01/xor.png" /></p>
+<p style="text-indent: 20px; text-align: justify">
+Essa falha em resolver problemas mais complexos causou uma queda de expectativa muito grande, e consequentemente, ao que ficou conhecido como primeiro Winter AI. 
+</p>
+
+<h2 id="explique-o-que-a-ia-pode-fazer-hoje-em-relacao-a-fala-o-biomimetismo-a-exploracao-espacial-jogos-navegacao-na-internet-veiculos-autonomos-e-vigilancia">Explique o que a IA pode fazer hoje em relação a: fala, o biomimetismo, a exploração espacial, jogos, navegação na internet, veículos autônomos e vigilância.</h2>
+<h3 id="fala">Fala</h3>
+<p style="text-indent: 20px; text-align: justify">
+Algoritmos de reconhecimento de voz integrados em assistentes virtuais, como a Alexa, faz com que a mesma só obedeça comandos da voz cadastrada no sistema, gerando maior segurança em ambientes automatizados controlados pela IA.
+</p>
+
+<h3 id="biomimetismo">Biomimetismo</h3>
+<p style="text-indent: 20px; text-align: justify">
+Um exemplo de aplicação de biomimetismo e IA é o chatbot, que é utilizado para responder dúvidas frequentes dos usuários de determinado sistema, entregando a informação de forma mais acessível e utilizando uma linguagem mais natural.
+</p>
+
+<h3 id="exploracao-espacial">Exploração espacial</h3>
+<p style="text-indent: 20px; text-align: justify">
+Interagir com um robô que está em outro planeta pode ser bem difícil considerando o delay entre um comando e outro, dessa forma a IA é uma solução que permite ao sistema integrado ao hardware tomar as próximas decisões por conta própria.
+</p>
+
+<h3 id="jogos">Jogos</h3>
+<p style="text-indent: 20px; text-align: justify">
+No jogo Need For Speed, por exemplo, um algoritmo de inteligência artificial é utilizado para criar vários tipos de carros em uma corrida, baseando-se em um deles. Dessa forma o  tempo de criação dos elementos é reduzido e a variedade de carros é aumentada.
+</p>
+
+<h3 id="navegacao-na-internet">Navegação na Internet</h3>
+<p style="text-indent: 20px; text-align: justify">
+A IA na navegação pode ser utilizada de forma a analisar os dados do usuário e recomendar os anúncios que mais se encaixam com o perfil da pessoa, entregando ADs direcionados a cada perfil.
+</p>
+
+<h3 id="veiculos-autonomos">Veículos autônomos</h3>
+<p style="text-indent: 20px; text-align: justify">
+Com IA integrada ao sistema dos veículos é possível que o automóvel se locomova sem a necessidade de um condutor. Essa tecnologia já pode ser observada em alguns modelos da Tesla, como no vídeo abaixo:
+</p>
+
+<iframe width="560" height="315" aling="center" src="https://www.youtube.com/embed/fmDdxzI69Uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h3 id="vigilancia">Vigilância</h3>
+<p style="text-indent: 20px; text-align: justify">
+Com o avanço da visão computacional alguns sistemas de vigilância podem ser capazes de identificar pessoas em meio a multidões e, por exemplo, rapidamente descobrir um indivíduo é foragido da justiça ou não. Como <a href="https://g1.globo.com/mundo/noticia/homem-e-reconhecido-e-preso-em-meio-a-publico-de-60-mil-em-show-na-china.ghtml" target="blank">esse caso</a> que aconteceu na China.
+</p>
+
+<h2 id="discorra-sobre-os-impactos-da-ia-na-sociedade-humana-considerando-vantagens-e-riscos">Discorra sobre os impactos da IA na sociedade humana, considerando vantagens e riscos.</h2>
+<p style="text-indent: 20px; text-align: justify">
+A inteligência artificial vem crescendo bastante em popularidade nos últimos anos, graças aos avanços na área muitas tarefas que eram ou seriam realizadas utilizando mão de obra humana pode ser substituída por máquinas, o que gera uma maior eficácia e acurácia, por outro lado é preciso ter cuidado durante o treinamento da tecnologia para que preconceitos e achismos do programador não afetem o julgamento da IA, como por exemplo o que ocorreu com o <a href="https://canaltech.com.br/inteligencia-artificial/ia-projetada-para-dar-conselhos-eticos-se-mostra-um-bot-racista-e-preconceituoso-200007/" target="blank"> Projeto Ask Delphi </a>.
+</p>
+
+<h2 id="referencias">Referências</h2>
+<blockquote>
+<p>O que é inteligência artificial (IA)? Saiba mais Sobre Inteligência Artificial, Oracle. Disponível em: https://www.oracle.com/br/artificial-intelligence/what-is-ai/, acesso em 27 de jun. de 2022.</p>
+<p>O que você precisa saber sobre um Winter AI?, Blog Conecta. Disponível em https://www.copeltelecom.com/site/blog/o-que-e-um-winter-ai/, acesso em 27 de jun. de 2022.</p>
+<p>O Perceptron – Parte 2, Deep Learning Book. Disponível em: https://www.deeplearningbook.com.br/o-perceptron-parte-2/, acesso em 27 de jun. de 2022.</p>
+</blockquote>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../discussoes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Materiais extras" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Materiais extras
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../conclusao/" class="md-footer__link md-footer__link--next" aria-label="Next: Conclusão" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Conclusão
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.48f2be22.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+      
+    
+  </body>
+</html>
